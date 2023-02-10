@@ -1,4 +1,4 @@
-# README
+# Getting set up with configs
 
 ## Introduction
 This repository contains a bash script `startup.sh` and a Dockerfile to create a Docker image that runs the script. The script sets up a website SSL Certificate Authority (CA) and a personal SSL CA and starts a sample PHP server. 
@@ -64,3 +64,32 @@ This README describes how to use the bash script `startup.sh`
 ```bash
 docker run -p 7783:7783 my_php_server
 ```
+
+# Database config setup for MySQL
+
+## Introduction
+
+This readme provides instructions for creating a new database, user, and granting all privileges in MySQL, and also explains how to set up the database configuration file.
+
+## Prerequisites
+
+- MySQL server should be installed on the system.
+- Access to MySQL as root user or with sufficient privileges to create a database, user and grant privileges.
+
+## Creating a new database and user in MySQL
+
+1. Open the terminal and log in to MySQL as root user:
+
+```bash
+mysql -u root -p
+```
+
+
+2. Once logged in, create a new database `zecertdb`:
+```
+CREATE DATABASE zecertdb;
+```
+
+
+3. Create a new user `root` with password `root`:
+
